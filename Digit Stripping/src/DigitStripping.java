@@ -48,6 +48,16 @@ public class DigitStripping
 							}
 						
 					} while (run == true);
+				int lastDigitOfSum = sum % 10;
+				int roundedNumber = sum;
+				if (lastDigitOfSum >= 5)
+					{
+						roundedNumber = roundedNumber - lastDigitOfSum + 10;
+					}
+				else 
+					{
+						roundedNumber = roundedNumber - lastDigitOfSum;
+					}
 				if (counter == 1)
 					{
 						System.out.println("There is one digit");
@@ -65,6 +75,6 @@ public class DigitStripping
 						System.out.println("There are " + oddNumbers + " odd digits");
 					}
 				System.out.println("The sum of the digits is " + sum);
-				System.out.println("The rounded sum of the digits is " + roundedSum);
+				System.out.println("The rounded sum of the digits is " + roundedNumber);
 			}
 	}
